@@ -142,7 +142,6 @@ class musicplayer:
     """
     It's a function that plays the next song in the playlist.
     """
-    # if self.FuncLock == True : return
     before_idx = (self.idx) % len(self.playlist)
     self.idx = (self.idx + 1) % len(self.playlist)
     self.song_list.selection_clear(before_idx)
@@ -153,7 +152,6 @@ class musicplayer:
     """
     It's a function that plays the previous song in the playlist.
     """
-    # if self.FuncLock == True : return
     before_idx = (self.idx) % len(self.playlist)
     self.idx = (self.idx - 1) % len(self.playlist)
     self.song_list.selection_clear(before_idx)
@@ -274,10 +272,6 @@ if __name__ == '__main__':
   pygame.init()
   pygame.mixer.init()
 
-  # light = "#D3DFE1"
-  # dark = "#2A2C2D"
-
-  # # play_btn.grid_forget()
   root = Tk()
   root.title("Music Player App")
   root.geometry("600x300")
